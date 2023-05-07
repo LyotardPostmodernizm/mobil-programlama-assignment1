@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lütfen Adınızı Giriniz:   "></TextView>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="Ad"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:text="Lütfen Soy Adınızı Giriniz:">
+
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/et_sirname"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="Soy Ad"
+                android:inputType="textPersonName"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:text="Lütfen Cinsiyetinizi Seçiniz:   "></TextView>
+
+            <RadioGroup
+                android:id="@+id/cinsiyetGrup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/erkekButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:text="Erkek"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/kızButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:text="Kız"></RadioButton>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lütfen E-mail adresinizi Giriniz:"></TextView>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ornek@hotmail.com"
+            android:inputType="textEmailAddress"
+            android:minWidth="48dp"
+            android:minHeight="48dp"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lütfen 2. E-mail adresinizi Giriniz:"></TextView>
+
+            <EditText
+                android:id="@+id/et_secondemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ornek@gmail.com"
+                android:inputType="textEmailAddress"
+                android:minWidth="48dp"
+                android:minHeight="48dp"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefon: "></TextView>
+
+            <EditText
+                android:id="@+id/etphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="örnek: 0532 ... .. .."
+
+            android:inputType="phone"></EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Lütfen Mezuniyet Tarihini Giriniz:"></TextView>
+
+        <EditText
+            android:id="@+id/et_graduateYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Örnek: 2009"
+            android:inputType="date"
+            android:minWidth="48dp"
+            android:minHeight="48dp"></EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yaşadığınız Ülke: "></TextView>
+
+            <EditText
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="örnek: Türkiye"></EditText>
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İş: "></TextView>
+
+        <EditText
+            android:id="@+id/jobinfos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="örnek: Data Scientist"></EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sosyal Medya Profil Linkleriniz: "></TextView>
+
+        <EditText
+            android:id="@+id/social1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ornek.olsun/facebook.com"></EditText>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Lütfen Fotoğrafınızı Yükleyiniz"></TextView>
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/user_photo"
+            android:clickable="true"
+            android:hint="Click here to select photo"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:contentDescription="Click here to select photo"/>
+
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="150dp"
+            android:layout_height="86dp"
+            android:background="@drawable/sendf"
+            android:clickable="true"
+            android:hint="Click here to create profile"
+            android:contentDescription="Click here to create profile"/>
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+    </LinearLayout>

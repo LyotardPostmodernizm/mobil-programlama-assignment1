@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212554666772",
+    "project_id": "newfirebasedeneme",
+    "storage_bucket": "newfirebasedeneme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212554666772:android:acf2b8536f16a53b25a801",
+        "android_client_info": {
+          "package_name": "com.bignerdranch.android.newfirebasedeneme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212554666772-0jm6jvodakvnofgv7cj9ch3858mgft6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPOfi156puv-H5g7yuod7FQYh8ge9gfD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212554666772-0jm6jvodakvnofgv7cj9ch3858mgft6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

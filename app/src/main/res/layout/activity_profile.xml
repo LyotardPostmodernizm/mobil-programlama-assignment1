@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:orientation="vertical"
+    android:layout_gravity="center|top">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center|top">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="              Yıldız Teknik Üniversitesi Öğrenci Platformu"
+        android:textStyle="bold|italic"
+        android:background="@color/teal_200">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adınız:"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ad"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soyadınız:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/soyad"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parolanız:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/parola"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cinsiyet:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/cinsiyet"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Mezuniyet Yılı:"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/graduate"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Ülke:"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/country"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="İş Bilgileri:"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/jobinfos"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Telefon:"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/phone"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="E - mailiniz:"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/email"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2. E - mailiniz:"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/secondemail"></TextView>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sosyal Medya Bilgileriniz:"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/socialmedia"></TextView>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/fotograf"></ImageView>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/yildiz_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"></ImageView>
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

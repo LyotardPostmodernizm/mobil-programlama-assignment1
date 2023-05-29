@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
             firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                 @Override
                 public void onSuccess(AuthResult authResult) {
+                    String email = binding.etEmail.getText().toString();
+                    String password = binding.etPassword.getText().toString();
                     if(email=="admin@gmail.com" && password == "adminadmin"){
                         Toast.makeText(MainActivity.this, "Hoş geldiniz admin. Kullanıcı listesine yönlendiriliyorsunuz.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this,UserList.class);

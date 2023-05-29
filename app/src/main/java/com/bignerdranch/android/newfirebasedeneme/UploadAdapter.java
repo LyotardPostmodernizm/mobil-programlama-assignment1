@@ -39,9 +39,9 @@ public class UploadAdapter extends RecyclerView.Adapter<UploadAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull UploadAdapter.ViewHolder holder, int position) {
-        holder.postViewBinding.name.setText(postList.get(position).name);
-        holder.postViewBinding.surname.setText(postList.get(position).surname);
-        holder.postViewBinding.email.setText(postList.get(position).email);
+        holder.postViewBinding.recyclerviewname.setText(postList.get(position).name);
+        holder.postViewBinding.recyclerviewsurname.setText(postList.get(position).surname);
+        holder.postViewBinding.recyclerviewemail.setText(postList.get(position).email);
         Picasso.get().load(postList.get(position).Image).into(holder.postViewBinding.image);
         holder.postViewBinding.recyclerviewRowCommentText.setText(postList.get(position).comment);
 

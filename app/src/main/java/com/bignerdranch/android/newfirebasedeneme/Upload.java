@@ -1,5 +1,7 @@
 package com.bignerdranch.android.newfirebasedeneme;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -19,24 +21,30 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.bignerdranch.android.newfirebasedeneme.databinding.ActivityUploadBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class Upload extends AppCompatActivity {
@@ -52,6 +60,16 @@ public class Upload extends AppCompatActivity {
     ActivityResultLauncher<Intent> activityResultLauncher;
     ActivityResultLauncher<String> permissionLauncher;
 
+    FirebaseFirestore db;
+    FirebaseUser currentUser;
+
+
+    DocumentReference docRef;
+
+    String kullaniciAdi=null;
+    String kullaniciSoyAdi=null;
+    String kullaniciTelefonu=null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +84,8 @@ public class Upload extends AppCompatActivity {
         storageReference = firebaseStorage.getReference();
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        docRef = firebaseFirestore.collection("users").document(currentUser.getUid());
     }
 
 
@@ -90,14 +110,15 @@ public class Upload extends AppCompatActivity {
                             String downloadUrl = uri.toString();
 
                             FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-
-
                             String userEmail = firebaseUser.getEmail();
 
                             String comment = binding.commentText.getText().toString();
-
+                            KullanicidanAl();
                             HashMap<String, Object> postData = new HashMap<>();
+                            postData.put("name",kullaniciAdi);
+                            postData.put("surname",kullaniciSoyAdi);
                             postData.put("email",userEmail);
+                            postData.put("phoneNumber",kullaniciTelefonu);
                             postData.put("image",downloadUrl);
                             postData.put("comment",comment);
                             postData.put("date", FieldValue.serverTimestamp());
@@ -133,6 +154,28 @@ public class Upload extends AppCompatActivity {
 
     }
 
+    public void KullanicidanAl(){
+        docRef.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    Map<String, Object> data = document.getData();
+
+                    kullaniciAdi  = (String) data.get("name");
+                    kullaniciSoyAdi = (String) data.get("surname");
+
+                    kullaniciTelefonu = (String) data.get("phoneNumber");
+
+
+
+                } else {
+                    Log.d(TAG, "Belirtilen doküman bulunamadı!");
+                }
+            } else {
+                Log.d(TAG, "Doküman alınırken hata oluştu: ", task.getException());
+            }
+        });
+    }
 
 
 

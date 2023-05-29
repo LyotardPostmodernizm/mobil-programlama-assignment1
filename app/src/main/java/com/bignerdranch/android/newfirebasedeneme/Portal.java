@@ -60,6 +60,11 @@ public class Portal extends AppCompatActivity {
             startActivity(intentToNews);
             finish();
         }
+        else if(item.getItemId()==R.id.map){
+            Intent intentToMap = new Intent(Portal.this,MainMapsActivity.class);
+            startActivity(intentToMap);
+            finish();
+        }
 
         else if (item.getItemId() == R.id.signout) {
             firebaseAuth.signOut();
@@ -124,10 +129,11 @@ public class Portal extends AppCompatActivity {
                         String name = (String) data.get("name");
                         String surname = (String) data.get("surname");
                         String email = (String) data.get("email");
+                        String phoneNumber = (String)data.get("phoneNumber");
                         String comment = (String) data.get("comment");
                         String image = (String) data.get("image");
 
-                        Post post = new Post(name,surname,email,comment,image);
+                        Post post = new Post(name,surname,email,phoneNumber,comment,image);
 
                         postList.add(post);
 

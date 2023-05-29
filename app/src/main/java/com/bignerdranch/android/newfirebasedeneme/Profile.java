@@ -69,6 +69,11 @@ public class Profile extends AppCompatActivity {
             startActivity(intentToNews);
             finish();
         }
+        else if(item.getItemId()==R.id.map){
+            Intent intentToMap = new Intent(Profile.this,MainMapsActivity.class);
+            startActivity(intentToMap);
+            finish();
+        }
 
         else if (item.getItemId() == R.id.signout) {
             firebaseAuth.signOut();

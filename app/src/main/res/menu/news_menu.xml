@@ -3,5 +3,6 @@
 
     <item android:id="@+id/profile" android:title="Profilime Git"></item>
     <item android:id="@+id/portal" android:title="Portala Git"></item>
+    <item android:id="@+id/map" android:title="Haritaya Git"></item>
     <item android:id="@+id/signout" android:title="Çıkış Yap"></item>
 </menu>

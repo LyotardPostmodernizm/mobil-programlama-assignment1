@@ -102,7 +102,7 @@ public class UserList extends AppCompatActivity {
 
     public void getDataFromDatabase() {
 
-        CollectionReference collectionReference = firebaseFirestore.collection("Kullanıcılar");
+        CollectionReference collectionReference = firebaseFirestore.collection("users");
 
         collectionReference.addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
